@@ -165,11 +165,11 @@ public class UserController {
 //    	return "password";
 //    }
     
-    @GetMapping("/homepage")
-  	public String homePagee()
-  	{
-  		return "homepage";
-  	}
+//    @GetMapping("/homepage")
+//  	public String homePagee()
+//  	{
+//  		return "homepage";
+//  	}
     
     @GetMapping("/rpage")
   	public String rpage()
@@ -187,11 +187,11 @@ public class UserController {
 		return "login";
 	}
     
-    @GetMapping("lpage")
-    public String loginn()
-    {
-    	return "login";
-    }
+//    @GetMapping("lpage")
+//    public String loginn()
+//    {
+//    	return "login";
+//    }
 
 //    @PostMapping("/changePassword")
 //    public String changePassword(
@@ -234,33 +234,45 @@ public class UserController {
         
    	}
  
-    @PostMapping("/login")
-    public String login(@RequestParam String email,@RequestParam String password, RedirectAttributes redirectAttributes,HttpSession session,Model model) {
-        // finding user by email 
-        User storedUser = userRepo.findByEmail(email);
-        session.setAttribute("email", email);
-        
-        
-        
-     
-            session.setAttribute("user_id", storedUser.getId()); // Set the user_id in the session
-            session.setAttribute("user_name", storedUser.getFname()); // Set the user_id in the session
-            Integer userId = (int) session.getAttribute("user_id"); // Get the user_id from the session
-            List<Car> cars = carRepo.findByUserId(userId);
-            model.addAttribute("cars", cars);
-      
-        if (storedUser != null) {
-            BCryptPasswordEncoder bcrypt = new BCryptPasswordEncoder();
-            
-            //  if the entered password matches the stored password in db
-            if (bcrypt.matches(password, storedUser.getPassword())) {
-                
-                return "hh";
-            }
-        }
-        redirectAttributes.addFlashAttribute("error", "Invalid email or password");
-        return "redirect:/index";
+//    @PostMapping("/login")
+//    public String login(@RequestParam String email,@RequestParam String password, RedirectAttributes redirectAttributes,HttpSession session,Model model) {
+//        // finding user by email 
+//        User storedUser = userRepo.findByEmail(email);
+//        session.setAttribute("email", email);
+//        
+//        
+//        
+//     
+//            session.setAttribute("user_id", storedUser.getId()); // Set the user_id in the session
+//            session.setAttribute("user_name", storedUser.getFname()); // Set the user_id in the session
+//            Integer userId = (int) session.getAttribute("user_id"); // Get the user_id from the session
+//            List<Car> cars = carRepo.findByUserId(userId);
+//            model.addAttribute("cars", cars);
+//      
+//        if (storedUser != null) {
+//            BCryptPasswordEncoder bcrypt = new BCryptPasswordEncoder();
+//            
+//            //  if the entered password matches the stored password in db
+//            if (bcrypt.matches(password, storedUser.getPassword())) {
+//                
+//                return "hh";
+//            }
+//        }
+//        redirectAttributes.addFlashAttribute("error", "Invalid email or password");
+//        return "redirect:/index";
+//    }
+    
+//    @GetMapping("/login")
+//    public String logins()
+//    {
+//    	return "login";
+//    }
+    @GetMapping("/homepage")
+    public String homess()
+    {
+    	return "hh";
     }
+    
     @GetMapping("/userhomepage")
    	public String welcome()
    	{

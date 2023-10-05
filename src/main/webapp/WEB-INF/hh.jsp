@@ -65,7 +65,7 @@
     </ul>
   </div>
       <!-- Add the search bar -->
-    
+    <a href="/logout" >Logout</a>
   
 </nav>
 <br><br>
