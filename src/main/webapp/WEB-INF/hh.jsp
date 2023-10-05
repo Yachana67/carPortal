@@ -82,7 +82,7 @@
     </form>
 </div>
     
-        <table class="table table-striped-columns">
+      <!--    <table class="table table-striped-columns">
             <thead>
                 <tr>
                     
@@ -103,7 +103,7 @@
                 </c:forEach>
             </tbody>
         </table>
- 
+ -->
        <div>
        </div>
 </div>

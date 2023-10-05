@@ -156,9 +156,9 @@ session.setAttribute("user", name);
   
 
   
-    <label> Username :</label>
+    <label> Email :</label>
   <br>
-  <input type="text" name="username" id="emm" required >
+  <input type="text" name="email" id="emm" required >
   
   <br><br>
    <label> Password :</label>

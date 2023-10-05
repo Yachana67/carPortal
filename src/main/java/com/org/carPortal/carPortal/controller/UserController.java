@@ -179,9 +179,9 @@ public class UserController {
     @PostMapping("/register")
 	public String login(@ModelAttribute User user)
 	{
-    	BCryptPasswordEncoder bcrypt=new BCryptPasswordEncoder();
-    	String encodedPassword = bcrypt.encode(user.getPassword());
-        user.setPassword(encodedPassword);
+//    	BCryptPasswordEncoder bcrypt=new BCryptPasswordEncoder();
+//    	String encodedPassword = bcrypt.encode(user.getPassword());
+//        user.setPassword(encodedPassword);
         
     	userRepo.save(user);
 		return "login";
